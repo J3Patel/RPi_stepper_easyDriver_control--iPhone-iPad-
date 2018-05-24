@@ -1,0 +1,6 @@
+framework module Pods_Stepper_Mobile_Controller {
+  umbrella header "Pods-Stepper_Mobile_Controller-umbrella.h"
+
+  export *
+  module * { export * }
+}

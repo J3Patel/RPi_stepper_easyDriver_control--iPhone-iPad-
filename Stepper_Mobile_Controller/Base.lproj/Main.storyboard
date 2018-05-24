@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yvl-Vb-cOM">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Azb-bX-UHr">
+            <objects>
+                <viewController id="Yvl-Vb-cOM" customClass="ViewController" customModule="Stepper_Mobile_Controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ie-lU-0wW">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pj3-Xr-GLI">
+                                <rect key="frame" x="557" y="145" width="100" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLE-h6-fvt">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3RQ-Ll-Lij"/>
+                                            <constraint firstAttribute="width" constant="100" id="AVa-D5-TqW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="117"/>
+                                        <state key="normal" title="▲"/>
+                                        <connections>
+                                            <action selector="touchUpStarted:" destination="Yvl-Vb-cOM" eventType="touchDown" id="wpk-ak-egb"/>
+                                            <action selector="upButtonTapped:" destination="Yvl-Vb-cOM" eventType="touchUpInside" id="zdK-Vx-3tw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5j-cb-hO3">
+                                        <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ZrL-tu-wDL"/>
+                                            <constraint firstAttribute="width" constant="100" id="lUM-Ha-E0U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="117"/>
+                                        <state key="normal" title="▼"/>
+                                        <connections>
+                                            <action selector="downButtonTapped:" destination="Yvl-Vb-cOM" eventType="touchUpInside" id="Pvy-pL-zK7"/>
+                                            <action selector="downTouchStarted:" destination="Yvl-Vb-cOM" eventType="touchDown" id="MWM-to-FPL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db1-6v-cTl">
+                                <rect key="frame" x="295" y="20" width="77" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectButtonTapped:" destination="Yvl-Vb-cOM" eventType="touchUpInside" id="ZKz-1M-d38"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="db1-6v-cTl" firstAttribute="top" secondItem="gz2-Se-IuF" secondAttribute="top" constant="20" id="2f6-mL-e8I"/>
+                            <constraint firstItem="db1-6v-cTl" firstAttribute="centerX" secondItem="4Ie-lU-0wW" secondAttribute="centerX" id="L6Y-rJ-rL2"/>
+                            <constraint firstItem="gz2-Se-IuF" firstAttribute="bottom" secondItem="Pj3-Xr-GLI" secondAttribute="bottom" constant="10" id="cWk-2Z-eOY"/>
+                            <constraint firstItem="gz2-Se-IuF" firstAttribute="trailing" secondItem="Pj3-Xr-GLI" secondAttribute="trailing" constant="10" id="xO3-my-5OO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gz2-Se-IuF"/>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="db1-6v-cTl" id="v57-Gt-uYo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TE9-nh-Mxc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="190"/>
+        </scene>
+    </scenes>
+</document>
